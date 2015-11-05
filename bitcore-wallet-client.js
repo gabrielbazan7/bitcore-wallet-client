@@ -379,7 +379,8 @@ API.prototype.export = function(opts) {
   if (opts.noSign) {
     c.setNoSign();
   }
-
+  c.historyCache = opts.historyCache;
+  c.addressBook = opts.addressBook;
   output = JSON.stringify(c.toObj());
 
   return output;
